@@ -1,0 +1,72 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.home_page_light {
+  height: 100vh;
+  width: 100vw;
+}
+
+.home_page_dark {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    270deg,
+    #000000,
+    #090808,
+    #181313,
+    #15111a,
+    #181023,
+    #1c0e2f,
+    #1e0b38,
+    #220a41
+  );
+  background-size: 1600% 1600%;
+
+  -webkit-animation: DarkTheme 23s ease infinite;
+  -moz-animation: DarkTheme 23s ease infinite;
+  animation: DarkTheme 23s ease infinite;
+}
+
+@-webkit-keyframes DarkThem {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes DarkThem {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes DarkThem {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

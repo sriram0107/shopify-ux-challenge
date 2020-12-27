@@ -1,0 +1,21 @@
+.search {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.searchbar {
+  width: 80%;
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: none;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.select {
+  width: 10vw;
+  height: 10vh;
+}
