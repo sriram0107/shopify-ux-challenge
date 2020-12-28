@@ -1,22 +1,44 @@
 .search {
-  width: 100vw;
-  height: 30vh;
+  width: 90vh;
+  height: 5vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  overflow-x: scroll;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: white;
+  margin-top: 40px;
 }
 .searchbar {
-  width: 80%;
-  height: 60px;
+  width: 90%;
+  height: 100%;
   border-radius: 30px;
   box-shadow: none;
-  font-size: xx-large;
+  font-size: x-large;
   text-align: center;
+  border: none;
+}
+
+.searchbar:click {
+  border: none;
 }
 
 .select {
   width: 10vw;
   height: 10vh;
+}
+
+.search_icon {
+  color: black;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.delete {
+  color: rgb(182, 78, 78);
+  cursor: pointer;
+}
+.add {
+  color: rgb(75, 189, 136);
+  cursor: pointer;
 }

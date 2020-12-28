@@ -1,10 +1,15 @@
 import React from "react";
 import "../styles/nominee.css";
 import Card from "./Card";
+import Placeholder from "./Placeholder";
 
-const Result = ({ nominees, changeNominees }) => {
+const Result = ({ nominees, changeNominees, limit }) => {
   if (nominees.length == 0) {
-    return <div></div>;
+    return (
+      <div className="nominations">
+        <Placeholder no={0} />
+      </div>
+    );
   } else {
     const change = (movie) => {
       var new_arr = [...nominees];
