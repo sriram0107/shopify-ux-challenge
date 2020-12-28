@@ -1,12 +1,14 @@
 .search_results {
-  width: 100vw;
-  height: 40vh;
-  border: 1px solid aqua;
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  overflow-x: scroll;
+  /* align-items: center; */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .poster {
@@ -14,24 +16,36 @@
   height: 70%;
 }
 .card {
-  height: 100%;
-  width: 20vh;
+  height: 40%;
+  width: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-size: small;
+  align-items: center;
+  font-size: smaller;
   font-weight: bold;
   text-align: center;
-  border: 1px solid tomato;
-  margin: 3px;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .nominations {
-  width: 100vw;
-  height: fit-content;
+  width: 20vw;
+  height: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
 }
+
+/* .display_card{
+  height: 70%;
+  width: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: smaller;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+  border-radius: 10px;
+} */

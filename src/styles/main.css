@@ -2,6 +2,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .home_page_light {
@@ -9,14 +10,24 @@
   width: 100vw;
 }
 
+input:focus {
+  outline: none;
+}
+
+.intro_text {
+  font-size: 80px;
+}
+
 .home_page_dark {
   height: 100vh;
   width: 100vw;
   padding-top: 30px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  overflow-y: hidden;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(
@@ -32,12 +43,12 @@
   );
   background-size: 1600% 1600%;
 
-  -webkit-animation: DarkTheme 23s ease infinite;
-  -moz-animation: DarkTheme 23s ease infinite;
-  animation: DarkTheme 23s ease infinite;
+  -webkit-animation: DarkTheme 13s ease infinite;
+  -moz-animation: DarkTheme 13s ease infinite;
+  animation: DarkTheme 13s ease infinite;
 }
 
-@-webkit-keyframes DarkThem {
+@-webkit-keyframes DarkTheme {
   0% {
     background-position: 0% 50%;
   }
@@ -48,7 +59,7 @@
     background-position: 0% 50%;
   }
 }
-@-moz-keyframes DarkThem {
+@-moz-keyframes DarkTheme {
   0% {
     background-position: 0% 50%;
   }
@@ -59,7 +70,7 @@
     background-position: 0% 50%;
   }
 }
-@keyframes DarkThem {
+@keyframes DarkTheme {
   0% {
     background-position: 0% 50%;
   }
@@ -69,4 +80,13 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+.search_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 80vw;
+  height: 100vh;
+  padding-left: 10vh;
 }

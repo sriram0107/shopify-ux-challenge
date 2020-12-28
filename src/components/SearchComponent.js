@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/search.css";
+import SearchIcon from "@material-ui/icons/Search";
+
 const Search = (props) => {
   const [movie, changeMovie] = useState("");
   const change = (e) => {
@@ -8,16 +10,19 @@ const Search = (props) => {
   const select = () => {
     //make API call and send json to main for further processing
     const url = `http://www.omdbapi.com/?s=${movie}&apikey=3e37378`;
+    props.changeLoading(true);
     fetch(url)
       .then((data) => data.json())
       .then((data) => {
+        props.changeLoading(false);
+        console.log(data);
         var new_arr = [];
         data.Search.forEach((res) => {
           new_arr.push(res);
         });
         props.changeSearch(new_arr);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log("err", err));
   };
   return (
     <div className="search">
@@ -29,8 +34,11 @@ const Search = (props) => {
         onChange={(e) => change(e)}
         required
       />
-      <button class="select" onClick={() => select()}></button>
-      {/* <SearchIcon /> */}
+      <SearchIcon
+        fontSize="large"
+        onClick={() => select()}
+        className="search_icon"
+      />
     </div>
   );
 };
