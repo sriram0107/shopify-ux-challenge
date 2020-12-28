@@ -17,6 +17,7 @@ const Main = () => {
         result={search}
         nominees={nominees}
         changeNominees={changeNominees}
+        limit={limit}
       />
       <Result nominees={nominees} changeNominees={changeNominees} />
     </div>
@@ -27,7 +28,7 @@ export default Main;
 
 /*
 todos
-1. prevent duplication by disabling nominate button
-2. prevent user from adding once limit has been reached
+1. prevent duplication when returning back
+2. prevent user from adding once limit has been reached -- done
 3. COMPLETELY RESTYLE THE PAGE!!!!!
 */

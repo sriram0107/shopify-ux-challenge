@@ -6,6 +6,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  overflow-x: scroll;
 }
 
 .poster {
@@ -13,11 +14,16 @@
   height: 70%;
 }
 .card {
-  border: 1px solid tomato;
   height: 100%;
-  width: fit-content;
+  width: 20vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid tomato;
+  margin: 3px;
 }
 
 .nominations {

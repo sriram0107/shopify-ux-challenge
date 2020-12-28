@@ -1,20 +1,22 @@
 import React from "react";
-import PropTypes from "prop-types";
+import Movie from "../movie.jpg";
 
 const Card = ({ ele, key, disabled, nominate, change }) => {
   return (
-    <div>
-      <div key={key} className="card">
-        <img className="poster" src={ele.Poster.toString()} />
-        <h2>{ele.Title}</h2>
-        {disabled ? (
-          <button disabled>Nominate</button>
-        ) : nominate ? (
-          <button onClick={() => change(ele)}>Nominate</button>
-        ) : (
-          <button>Delete</button>
-        )}
-      </div>
+    <div key={key} className="card">
+      <img
+        className="poster"
+        src={ele.Poster || ele.Poster === "N/A" ? ele.Poster.toString() : Movie}
+        // src={ele.Poster ? ele.Poster.toString() : Movie}
+      />
+      <p>{ele.Title}</p>
+      {disabled ? (
+        <button disabled>Nominate</button>
+      ) : nominate ? (
+        <button onClick={() => change(ele)}>Nominate</button>
+      ) : (
+        <button onClick={() => change(ele)}>Delete</button>
+      )}
     </div>
   );
 };

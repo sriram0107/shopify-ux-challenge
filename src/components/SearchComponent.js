@@ -7,12 +7,15 @@ const Search = (props) => {
   };
   const select = () => {
     //make API call and send json to main for further processing
-    const url = `http://www.omdbapi.com/?t=${movie}&apikey=3e37378`;
+    const url = `http://www.omdbapi.com/?s=${movie}&apikey=3e37378`;
     fetch(url)
       .then((data) => data.json())
       .then((data) => {
-        console.log(data);
-        props.changeSearch(data);
+        var new_arr = [];
+        data.Search.forEach((res) => {
+          new_arr.push(res);
+        });
+        props.changeSearch(new_arr);
       })
       .catch((err) => console.log(err));
   };
