@@ -7,6 +7,53 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  background: linear-gradient(
+    323deg,
+    #454545,
+    #616165,
+    #818181,
+    #292828,
+    #272424
+  );
+  background-size: 1000% 1000%;
+
+  -webkit-animation: cardbg 15s ease infinite;
+  -moz-animation: cardbg 15s ease infinite;
+  animation: cardbg 15s ease infinite;
+}
+
+@-webkit-keyframes cardbg {
+  0% {
+    background-position: 0% 38%;
+  }
+  50% {
+    background-position: 100% 63%;
+  }
+  100% {
+    background-position: 0% 38%;
+  }
+}
+@-moz-keyframes cardbg {
+  0% {
+    background-position: 0% 38%;
+  }
+  50% {
+    background-position: 100% 63%;
+  }
+  100% {
+    background-position: 0% 38%;
+  }
+}
+@keyframes cardbg {
+  0% {
+    background-position: 0% 38%;
+  }
+  50% {
+    background-position: 100% 63%;
+  }
+  100% {
+    background-position: 0% 38%;
+  }
 }
 
 .movie_item {
@@ -14,7 +61,21 @@
   width: 18vw;
   margin: 1vh 1vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: medium;
+  font-weight: bold;
+  align-items: flex-start;
   border-radius: 10px;
+}
+
+/* .movie_item mark {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+} */
+
+mark {
+  background-color: rgb(65, 65, 65);
+  color: white;
 }

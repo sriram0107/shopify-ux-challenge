@@ -13,7 +13,7 @@ const Card = ({ ele, key, disabled, nominate, change }) => {
         // src={ele.Poster ? ele.Poster.toString() : Movie}
       />
       <p>{ele.Title}</p>
-      <p>{ele.Year}</p>
+      <i>{ele.Year}</i>
       {disabled ? (
         // <button disabled>Nominate</button>
         <RemoveCircleIcon className="delete" />
