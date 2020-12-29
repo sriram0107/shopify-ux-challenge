@@ -2,13 +2,6 @@ import React from "react";
 import "../styles/nominee.css";
 import Card from "./Card";
 import Loading from "./Loading";
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel";
 
 const Nominations = ({
   result,
@@ -27,7 +20,11 @@ const Nominations = ({
     return nominees.map((n) => n.imdbID).includes(res.imdbID);
   };
   if (loading) {
-    return <Loading />;
+    return (
+      <div className="loading_result">
+        <Loading />
+      </div>
+    );
   }
   if (result) {
     if (result.Error) {
@@ -44,19 +41,7 @@ const Nominations = ({
         />
       );
     });
-    return (
-      <div className="search_results">
-        {/* {loading ? <Loading /> : <Carousel>result_list</Carousel>} */}
-        {/* <CarouselProvider
-          naturalSlideWidth={100}
-          naturalSlideHeight={40}
-          totalSlides={result_list.length}
-        >
-          <Slider>{result_list}</Slider>
-        </CarouselProvider> */}
-        {result_list}
-      </div>
-    );
+    return <div className="search_results">{result_list}</div>;
   } else {
     return <div></div>;
   }

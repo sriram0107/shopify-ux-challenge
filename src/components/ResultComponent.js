@@ -4,7 +4,7 @@ import Card from "./Card";
 import Placeholder from "./Placeholder";
 import MovieItem from "./MovieItem";
 
-const Result = ({ nominees, changeNominees, limit }) => {
+const Result = ({ nominees, changeNominees, limit, confirm }) => {
   if (nominees.length == 0) {
     return (
       <div className="nominations">
@@ -30,6 +30,7 @@ const Result = ({ nominees, changeNominees, limit }) => {
             disabled={false}
             nominate={false}
             change={change}
+            confirm={confirm}
           />
         );
       });

@@ -90,3 +90,21 @@ input:focus {
   height: 100vh;
   padding-left: 10vh;
 }
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.confirm {
+  margin-left: 10vw;
+  height: 7vh;
+  width: 25vh;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  font-size: medium;
+  border: none;
+}
