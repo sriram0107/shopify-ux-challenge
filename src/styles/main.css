@@ -27,7 +27,7 @@ input:focus {
   align-items: center;
   justify-content: flex-start;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: scroll;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(
@@ -108,4 +108,23 @@ input:focus {
   font-weight: bold;
   font-size: medium;
   border: none;
+}
+
+@media (max-width: 1100px) {
+  .home_page_dark {
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  .search_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 20px;
+    width: 100vw;
+    height: 80vh;
+    padding: 10px;
+  }
+  .intro_text {
+    font-size: 40px;
+  }
 }

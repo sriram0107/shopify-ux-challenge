@@ -37,8 +37,16 @@
 .delete {
   color: rgb(182, 78, 78);
   cursor: pointer;
+  z-index: 1;
 }
 .add {
   color: rgb(75, 189, 136);
   cursor: pointer;
+  margin-left: 0px;
+}
+
+@media (max-width: 1100px) {
+  .search {
+    width: 60vh;
+  }
 }

@@ -7,19 +7,23 @@ import "../styles/search.css";
 const Card = ({ ele, key, disabled, nominate, change }) => {
   return (
     <div key={key} className="card">
-      <img
-        className="poster"
-        src={ele.Poster && ele.Poster != "N/A" ? ele.Poster.toString() : Movie}
-      />
+      <div>
+        {disabled ? (
+          <RemoveCircleIcon className="delete" />
+        ) : nominate ? (
+          <AddCircleIcon onClick={() => change(ele)} className="add" />
+        ) : (
+          <RemoveCircleIcon onClick={() => change(ele)} className="delete" />
+        )}
+        <img
+          className="poster"
+          src={
+            ele.Poster && ele.Poster != "N/A" ? ele.Poster.toString() : Movie
+          }
+        />
+      </div>
       <p>{ele.Title}</p>
-      <i>{ele.Year}</i>
-      {disabled ? (
-        <RemoveCircleIcon className="delete" />
-      ) : nominate ? (
-        <AddCircleIcon onClick={() => change(ele)} className="add" />
-      ) : (
-        <RemoveCircleIcon onClick={() => change(ele)} className="delete" />
-      )}
+      <p>{ele.Year}</p>
     </div>
   );
 };
