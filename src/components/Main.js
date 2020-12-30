@@ -43,7 +43,7 @@ const Main = () => {
           <p className="intro_text">The Shoppies</p>
         )}
         {confirmed ? (
-          <Confirmation />
+          <Confirmation nominees={nominees} />
         ) : (
           <>
             <Search changeSearch={changeSearch} changeLoading={changeLoading} />
