@@ -6,11 +6,23 @@ import Confirmation from "./Confirmation";
 import "../styles/main.css";
 
 const Main = () => {
-  const [nominees, changeNominees] = useState([]);
+  const [nominees, changeNominees] = useState([]); //or []
+  // useEffect(() => {
+  //   changeNominees(JSON.parse(localStorage.getItem("nomineeData")) || []);
+  // });
+  // useEffect(() => {
+  //   localStorage.setItem("nomineeData", JSON.stringify(nominees));
+  // }, [nominees]);
   const [search, changeSearch] = useState(null);
   const [loading, changeLoading] = useState(false);
   const [limit, changeLimit] = useState(5); //Constant state - User can only nominate 5 movies
-  const [confirmed, changeConfirmed] = useState(false);
+  const [confirmed, changeConfirmed] = useState(false); //or false
+  // useEffect(() => {
+  //   changeConfirmed(Boolean(localStorage.getItem("confirmData") || false));
+  // });
+  // useEffect(() => {
+  //   localStorage.setItem("confirmData", confirmed);
+  // }, [confirmed]);
 
   const confirm = () => {
     changeConfirmed(true);

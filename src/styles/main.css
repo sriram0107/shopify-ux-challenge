@@ -100,6 +100,7 @@ input:focus {
 
 .confirm {
   margin-left: 10vw;
+  cursor: pointer;
   height: 7vh;
   width: 25vh;
   background-color: green;
