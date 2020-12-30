@@ -18,11 +18,12 @@ import Twitter from "@material-ui/icons/Twitter";
 import Whatsapp from "@material-ui/icons/WhatsApp";
 
 const Confirmation = ({ nominees }) => {
+  const app_url = "https://pacific-wave-49087.herokuapp.com/";
   const share_text = `I voted for ${nominees[0].Title}, ${nominees[1].Title}, ${nominees[2].Title}, ${nominees[3].Title}, ${nominees[4].Title}, for the Shoppies Award.\n Vote for your favorite movies now `;
   return (
     <div className="confirmation">
       <EmailShareButton
-        url="https://github.com/sriram0107"
+        url={app_url}
         subject={"Shoppies Movie Nomination"}
         body={share_text}
         children={
@@ -34,7 +35,7 @@ const Confirmation = ({ nominees }) => {
         }
       />
       <FacebookShareButton
-        url="https://github.com/sriram0107"
+        url={app_url}
         quote={share_text}
         body={share_text}
         hashtag="shoppies"
@@ -47,7 +48,7 @@ const Confirmation = ({ nominees }) => {
         }
       />
       <RedditShareButton
-        url="https://github.com/sriram0107"
+        url={app_url}
         title="My Shoppies Nominations"
         body={share_text}
         children={
@@ -59,7 +60,7 @@ const Confirmation = ({ nominees }) => {
         }
       />
       <TwitterShareButton
-        url="https://github.com/sriram0107"
+        url={app_url}
         title={share_text}
         hashtags={["shoppies", "movies"]}
         children={
@@ -71,7 +72,7 @@ const Confirmation = ({ nominees }) => {
         }
       />
       <WhatsappShareButton
-        url="https://github.com/sriram0107"
+        url={app_url}
         title={share_text}
         children={
           <SocialShare
