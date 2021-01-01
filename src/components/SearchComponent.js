@@ -9,7 +9,7 @@ const Search = (props) => {
   };
   const select = () => {
     //make API call and send json to main for further processing
-    const url = `http://www.omdbapi.com/?s=${movie}&apikey=3e37378`;
+    const url = `https://www.omdbapi.com/?s=${movie}&apikey=3e37378`;
     props.changeLoading(true);
     fetch(url)
       .then((data) => data.json())
