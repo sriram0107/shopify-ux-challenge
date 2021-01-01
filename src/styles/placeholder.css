@@ -1,6 +1,6 @@
 .placeholder {
   height: 18vh;
-  width: 18vw;
+  width: 300px;
   margin: 1vh 1vw;
   background-color: gray;
   display: flex;
@@ -58,8 +58,9 @@
 
 .movie_item {
   height: 18vh;
-  width: 18vw;
+  width: 300px;
   margin: 1vh 1vw;
+  background-color: gray;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -68,12 +69,6 @@
   align-items: flex-start;
   border-radius: 10px;
 }
-
-/* .movie_item mark {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0px;
-} */
 
 mark {
   background-color: rgb(65, 65, 65);
