@@ -3,11 +3,8 @@ import "../styles/confirm.css";
 import {
   EmailShareButton,
   FacebookShareButton,
-  LinkedinShareButton,
-  PinterestShareButton,
   RedditShareButton,
   TwitterShareButton,
-  ViberShareButton,
   WhatsappShareButton,
 } from "react-share";
 

@@ -18,7 +18,7 @@ const Card = ({ ele, key, disabled, nominate, change }) => {
         <img
           className="poster"
           src={
-            ele.Poster && ele.Poster != "N/A" ? ele.Poster.toString() : Movie
+            ele.Poster && ele.Poster !== "N/A" ? ele.Poster.toString() : Movie
           }
         />
       </div>

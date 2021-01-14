@@ -1,7 +1,5 @@
 import React from "react";
 import Movie from "../movie.jpg";
-import AddCircleIcon from "@material-ui/icons/AddCircle";
-import RemoveCircleIcon from "@material-ui/icons/RemoveCircle";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import CancelIcon from "@material-ui/icons/Cancel";
 import "../styles/placeholder.css";
@@ -12,7 +10,7 @@ const MovieItem = ({ ele, key, disabled, nominate, change, confirm }) => {
       className="movie_item"
       style={{
         backgroundImage: `url(
-          ${ele.Poster && ele.Poster != "N/A" ? ele.Poster.toString() : Movie}
+          ${ele.Poster && ele.Poster !== "N/A" ? ele.Poster.toString() : Movie}
         )`,
       }}
     >
