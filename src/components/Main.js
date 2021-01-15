@@ -15,8 +15,8 @@ const Main = () => {
   // }, [nominees]);
   const [search, changeSearch] = useState(null);
   const [loading, changeLoading] = useState(false);
-  const [limit, changeLimit] = useState(5); //Constant state - User can only nominate 5 movies
   const [confirmed, changeConfirmed] = useState(false); //or false
+  const limit = 5;
   // useEffect(() => {
   //   changeConfirmed(Boolean(localStorage.getItem("confirmData") || false));
   // });

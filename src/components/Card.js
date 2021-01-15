@@ -20,6 +20,7 @@ const Card = ({ ele, key, disabled, nominate, change }) => {
           src={
             ele.Poster && ele.Poster !== "N/A" ? ele.Poster.toString() : Movie
           }
+          alt="pic"
         />
       </div>
       <p>{ele.Title}</p>
