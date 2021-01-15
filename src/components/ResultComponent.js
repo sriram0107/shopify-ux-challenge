@@ -34,7 +34,7 @@ const Result = ({ nominees, changeNominees, limit, confirm }) => {
         );
       });
       for (var i = 0; i < limit - nominees.length; i++) {
-        lst.push(<Placeholder />);
+        lst.push(<Placeholder key={101 - i} />);
       }
       return lst;
     };
